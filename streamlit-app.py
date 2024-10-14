@@ -18,4 +18,4 @@ alt.themes.enable("dark")
 
 #######################
 # Load data
-df = pd.read_csv('data/worldcities.csv')
+df = pd.read_csv('./data/worldcities.csv')
