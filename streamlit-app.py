@@ -61,9 +61,9 @@ with st.sidebar:
 
 # Set up the Streamlit app
 st.title('OSM Map with World Cities')
-df_mapping = df[['lat', 'lng']]
+df_mapping = df_selected_country_sorted[['lat', 'lng']]
 df_mapping = df_mapping.rename(columns={'lng':'lon'})
-st.map(df_mapping)
+st.map(data=df_mapping, color="#ffaa0088")
 
 # Create a Folium map centered at an average location (or any other location)
 #m = folium.Map(location=[df['lat'].mean(), df['lng'].mean()], zoom_start=2)
