@@ -50,7 +50,7 @@ with st.sidebar:
     st.title('🏙️ World Cities Population Dashboard')
     
     country_list = list(df.country.unique())[::-1]
-    country_list = country_list.sort()
+    country_list.sort()
 
     selected_country = st.selectbox('Select a Country', country_list)
     df_selected_country = df[df.country == selected_country]
