@@ -3,5 +3,5 @@ pandas
 numpy 
 matplotlib
 altair 
+streamlit-folium
 folium
-streamlit_folium

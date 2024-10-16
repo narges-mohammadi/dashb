@@ -14,7 +14,7 @@ from streamlit_folium import st_folium
 
 st.set_page_config(
     page_title="World Cities Population Dashboard",
-    page_icon="🏂",
+    page_icon="🏙️",
     layout="wide",
     initial_sidebar_state="expanded")
 
