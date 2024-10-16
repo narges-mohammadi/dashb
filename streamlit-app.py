@@ -3,8 +3,8 @@
 import streamlit as st
 import pandas as pd
 #import numpy as np
-import folium
-from streamlit_folium import st_folium
+#import folium
+#from streamlit_folium import st_folium
 #import altair as alt
 #import plotly.express as px
 #import matplotlib.pyplot as plt
@@ -61,13 +61,15 @@ with st.sidebar:
 
 # Set up the Streamlit app
 st.title('OSM Map with World Cities')
+df_mapping = df[['lat', 'lng']]
+st.map(df_mapping)
 
 # Create a Folium map centered at an average location (or any other location)
-m = folium.Map(location=[df['lat'].mean(), df['lng'].mean()], zoom_start=2)
+#m = folium.Map(location=[df['lat'].mean(), df['lng'].mean()], zoom_start=2)
 
 # Add points to the map
-for i, row in df.iterrows():
-    folium.Marker([row['lat'], row['lng']], popup=row['city_ascii']).add_to(m)
+#for i, row in df.iterrows():
+    #folium.Marker([row['lat'], row['lng']], popup=row['city_ascii']).add_to(m)
 
 # Display the map in Streamlit using streamlit-folium
-st_data = st_folium(m, width=700, height=500)
+#st_data = st_folium(m, width=700, height=500)
