@@ -50,7 +50,7 @@ with st.sidebar:
     
     selected_country = st.selectbox('Select a Country', country_list)
     df_selected_country = df[df.country == selected_country]
-    df_selected_country_sorted = df_selected_country.sort_values(by="population", ascending=False)
+    df_selected_country_sorted = df_selected_country.sort_values(by="population", ascending=True)
 
     color_theme_list = ['blues', 'cividis', 'greens', 'inferno', 'magma', 'plasma', 'reds', 'rainbow', 'turbo', 'viridis']
     selected_color_theme = st.selectbox('Select a color theme', color_theme_list)
