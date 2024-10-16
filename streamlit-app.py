@@ -3,7 +3,7 @@
 import streamlit as st
 import pandas as pd
 #import numpy as np
-#import folium
+import folium
 #from streamlit_folium import st_folium
 #import altair as alt
 #import plotly.express as px
@@ -59,15 +59,16 @@ with st.sidebar:
     color_theme_list = ['blues', 'cividis', 'greens', 'inferno', 'magma', 'plasma', 'reds', 'rainbow', 'turbo', 'viridis']
     selected_color_theme = st.selectbox('Select a color theme', color_theme_list)
 
-
+'''
 # Set up the Streamlit app
 st.title('OSM Map with World Cities')
 df_mapping = df_selected_country_sorted[['lat', 'lng']]
 df_mapping = df_mapping.rename(columns={'lng':'lon'})
 st.map(data=df_mapping, color="#ffaa0088")
+'''
 
-# Create a Folium map centered at an average location (or any other location)
-#m = folium.Map(location=[df['lat'].mean(), df['lng'].mean()], zoom_start=2)
+# Create a Folium map centered at an average location 
+m = folium.Map(location=[df['lat'].mean(), df['lng'].mean()], zoom_start=2)
 
 # Add points to the map
 #for i, row in df.iterrows():
