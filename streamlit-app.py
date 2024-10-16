@@ -37,7 +37,8 @@ st.markdown("""
 }
 
 </style>
-""", unsafe_allow_html=True)
+""", 
+unsafe_allow_html=True)
 
 
 
@@ -46,7 +47,7 @@ df = pd.read_csv('./data/worldcities.csv')
 
 # Sidebar
 with st.sidebar:
-    st.title('🏂 World Cities Population Dashboard')
+    st.title('🏙️ World Cities Population Dashboard')
     
     country_list = list(df.country.unique())[::-1]
     
