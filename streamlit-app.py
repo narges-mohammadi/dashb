@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 #import altair as alt
 #import plotly.express as px
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 #######################
 # Page configuration
@@ -21,7 +21,7 @@ st.set_page_config(
 # Load data
 df = pd.read_csv('./data/worldcities.csv')
 
-'''
+
 
 
 # Title of the dashboard
@@ -54,5 +54,5 @@ if st.sidebar.checkbox('Show Summary'):
     st.subheader('Data Summary')
     st.write(data.describe())
 
-
+'''
 
