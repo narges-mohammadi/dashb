@@ -20,7 +20,7 @@ st.set_page_config(
 #######################
 # Load data
 df = pd.read_csv('./data/worldcities.csv')
-
+'''
 
 
 
@@ -54,5 +54,5 @@ if st.sidebar.checkbox('Show Summary'):
     st.subheader('Data Summary')
     st.write(data.describe())
 
-'''
+
 
