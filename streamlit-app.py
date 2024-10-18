@@ -1,5 +1,6 @@
 import os
 import subprocess
+import sys
 
 #######################
 # Import libraries
@@ -16,7 +17,7 @@ import pandas as pd
 try:
     import folium
 except ImportError:
-    subprocess.run(['pip', 'install', 'folium'])
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "folium==0.16.0"])
     import folium
 
 #######################
