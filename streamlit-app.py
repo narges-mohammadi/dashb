@@ -7,19 +7,21 @@ import sys
 import streamlit as st
 import pandas as pd
 #import numpy as np
-#import folium
+import folium
 #from streamlit_folium import st_folium
 #import altair as alt
 #import plotly.express as px
 #import matplotlib.pyplot as plt
 
 # Check if folium is installed, if not, install it
+'''
 try:
     import folium
 except ImportError:
+    print("Folium not found, attempting to install...")
     subprocess.check_call([sys.executable, "-m", "pip", "install", "folium==0.16.0"])
-    import folium
-
+    import folium  # Try to import it again after installation
+'''
 #######################
 # Page configuration
 
@@ -79,7 +81,7 @@ st.map(data=df_mapping, color="#ffaa0088")
 '''
 
 # Create a Folium map centered at an average location 
-m = folium.Map(location=[df['lat'].mean(), df['lng'].mean()], zoom_start=2)
+#m = folium.Map(location=[df['lat'].mean(), df['lng'].mean()], zoom_start=2)
 
 # Add points to the map
 #for i, row in df.iterrows():
